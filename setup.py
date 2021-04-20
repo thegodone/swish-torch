@@ -1,6 +1,9 @@
 from setuptools import setup, find_packages
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
+import os
+
+
 EXT_SRCS = [
     'csrc/swish.cpp',
     'csrc/swish_kernel.cu',
@@ -22,7 +25,7 @@ setup(
                 'cxx': [],
                 'nvcc': ['--expt-extended-lambda']
             },
-            include_dirs=['external']
+            include_dirs=[os.getcwd()+'/external']
         )
     ],
     cmdclass={
