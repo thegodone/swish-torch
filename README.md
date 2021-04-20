@@ -11,7 +11,7 @@ _It is important your CUDA Toolkit matches the version PyTorch is built for or e
 
 ## compilation 
 
-git clone the repo
+git clone https://github.com/thegodone/swish-torch.git
 cd swish-torch
 python setup.py install
 
